@@ -144,12 +144,12 @@ def event_logs():
     
     data_log = logs.query.filter_by(event_name=event_name).all()
 
-    array_books = []
-    for book in data_log:
-        dict_books = {}
-        dict_books.update({"username": book.username, "event_name": book.event_name, "log_lat": book.log_lat, "log_lng": book.log_lng})
-        array_books.append(dict_books)
-    return jsonify(array_books)
+    array_log = []
+    for log in data_log:
+        dict_logs = {}
+        dict_logs.update({"username": log.username, "event_name": log.event_name, "log_lat": log.log_lat, "log_lng": log.log_lng})
+        array_log.append(dict_logs)
+    return jsonify(array_log)
 
 if __name__ == '_main_':
     app.run(debug=True, port=4000)
