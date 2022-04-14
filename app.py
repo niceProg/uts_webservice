@@ -50,8 +50,6 @@ class logs(db.Model):
     log_lng = db.Column(db.String(20))
     created_at = db.Column(db.TIMESTAMP, default=datetime.now)
 
-db.create_all()
-
 @app.route("/api/v1/users/create", methods=["POST"])
 def create_user():
     username = request.json['username']
