@@ -3,6 +3,9 @@
 # 6D/19090110/Gusti Robbani
 # 6D/19090017/Khaepah
 
+# username = nim
+# password = 123
+
 from datetime import datetime
 from datetime import date
 import os, random, string
